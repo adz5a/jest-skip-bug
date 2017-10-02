@@ -1,8 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+describe("one test", () => {
+
+    it.skip("should be skipped", () => {
+        expect.hasAssertions();
+
+
+    }); 
+
+    it("should not be skipped", () => {
+        expect.hasAssertions();
+
+        expect(true).toBe(true);
+    }); 
 });
+
+
+describe.skip("all tests should be skipped", () => {
+
+    // both should be skipped
+    it.skip("should be skipped", () => {
+        expect.hasAssertions();
+
+
+    }); 
+
+    it("should not be skipped", () => {
+        expect.hasAssertions();
+
+        expect(true).toBe(true);
+    }); 
+});
+
